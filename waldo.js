@@ -1,4 +1,3 @@
-//
 
 function findWaldo(arr, found) {
 
@@ -26,7 +25,6 @@ function findWaldo(arr, found) {
 arr.forEach(function (name, index) {
   if (name === "Waldo") {
     found(index)
-    //found(name)
   }
 });
 
