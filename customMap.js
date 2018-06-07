@@ -2,17 +2,13 @@ var nums = [1, 5, 2];
 
 function double(arr, fnct) {
 
-  let doubleArr = [];
-  let newNum;
-
   for(let i = 0; i < nums.length; i++){
-    newNum = fnct(arr[i]);
-    doubleArr.push(newNum)
+    nums[i] = fnct(nums[i]);
   }
-  return doubleArr
+  return nums
 }
 
-console.log(double(nums, function(aNum) {
-  return aNum * 2;
+console.log(double(nums, function(num) {
+  return num * 2;
 }))
 
