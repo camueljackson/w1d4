@@ -1,19 +1,20 @@
+
 var students = [
-  { id: 1, name: "bruce",    age: 40 },
-  { id: 2, name: "zoidberg", age: 22 },
-  { id: 3, name: "alex",     age: 22 },
-  { id: 4, name: "alex",     age: 30 },
-  { id: 5, name: "bruce",    age: 29 }
+ { id: 1, name: "bruce",    age: 40 },
+ { id: 2, name: "zoidberg", age: 22 },
+ { id: 3, name: "alex",     age: 22 },
+ { id: 4, name: "alex",     age: 30 },
+ { id: 5, name: "alex",     age: 33 }
 ];
 
-function sortTheStudents(arr) {
+var sortedName = students.sort(function(a, b){
 
-  var sortedName = arr.sort(function(a, b){
-    return a.name > b.name;
-  });
-  return sortedName;
-}
+  if (a.name === b.name) {
+      return b.age - a.age;
+      } else {
+        return a.name > b.name;
+      }
 
+});
 
-
-console.log(sortTheStudents(students));
+console.log(sortedName)
